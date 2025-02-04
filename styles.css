@@ -1,0 +1,105 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+/* START CSS HERE */
+
+@font-face {
+    font-family: "OdinFont";
+    src: url(./fonts/Norse-Bold.otf);
+}
+
+body {
+    display: flex;
+    height: 100vh;
+}
+
+.left-side {
+    flex: 1 38%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    color: white;
+    background-image: url(./images/leafy-background.avif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.odin-title-container {
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12rem;
+}
+
+.odin-title-container h1 {
+    font-family: "OdinFont", sans-serif;
+    font-size: 7rem;
+}
+
+.odin-title-container img {
+    width: 100px;
+    height: 108px;
+}
+
+.footer {
+    color: rgb(194, 194, 194);
+    margin-bottom: 0.5rem;
+}
+
+
+.right-side {
+    border: 2px solid rebeccapurple;
+
+    flex: 1 62%;
+}
