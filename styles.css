@@ -1,50 +1,72 @@
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-  }
-  
-  /* 2. Remove default margin */
-  * {
+}
+
+/* 2. Remove default margin */
+* {
     margin: 0;
-  }
-  
-  body {
+}
+
+body {
     /* 3. Add accessible line-height */
     line-height: 1.5;
     /* 4. Improve text rendering */
     -webkit-font-smoothing: antialiased;
-  }
-  
-  /* 5. Improve media defaults */
-  img, picture, video, canvas, svg {
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
     display: block;
     max-width: 100%;
-  }
-  
-  /* 6. Inherit fonts for form controls */
-  input, button, textarea, select {
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
     font: inherit;
-  }
-  
-  /* 7. Avoid text overflows */
-  p, h1, h2, h3, h4, h5, h6 {
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     overflow-wrap: break-word;
-  }
-  
-  /* 8. Improve line wrapping */
-  p {
+}
+
+/* 8. Improve line wrapping */
+p {
     text-wrap: pretty;
-  }
-  h1, h2, h3, h4, h5, h6 {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     text-wrap: balance;
-  }
-  
-  /*
+}
+
+/*
     9. Create a root stacking context
   */
-  #root, #__next {
+#root,
+#__next {
     isolation: isolate;
-  }
+}
 
 
 /* START CSS HERE */
@@ -69,7 +91,7 @@ body {
     background-image: url(./images/leafy-background.avif);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
 }
 
 .odin-title-container {
@@ -79,7 +101,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 12rem;
+    margin-top: 17rem;
 }
 
 .odin-title-container h1 {
@@ -99,7 +121,84 @@ body {
 
 
 .right-side {
-    border: 2px solid rebeccapurple;
-
+    display: flex;
+    flex-direction: column;
     flex: 1 62%;
+    background-color: rgb(228, 228, 228);
 }
+
+.top {
+    flex: 1 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-size: 1rem;
+    padding-left: 3rem;
+    padding-right: 12rem;
+}
+
+.top > p {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.top >p:last-of-type {
+    margin-top: 1.5rem;
+}
+
+.middle {
+    flex: 1 33%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom {
+    flex: 1 33%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem;
+}
+
+.bottom div:last-of-type {
+    padding-top: 2rem;
+    font-size: 1.2rem;
+}
+
+.bottom button {
+    background-color: #596D48;
+    border-radius: 8px;
+    border: #596D48;
+    padding: 0.5rem 3.5rem;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-evenly;
+    padding: 2rem 3rem;
+}
+
+form h2 { 
+    margin-top: -2rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 6rem;
+
+}
+
+.form-group {
+    width: 30%;
+}
+
+.form-group input {
+    width: 100%;
+}
+
