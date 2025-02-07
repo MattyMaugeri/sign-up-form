@@ -166,6 +166,11 @@ body {
     font-size: 1.2rem;
 }
 
+div a {
+    color: #596D48;
+    text-decoration: none;
+}
+
 .bottom button {
     background-color: #596D48;
     border-radius: 8px;
@@ -174,6 +179,10 @@ body {
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+.bottom button:hover {
+    cursor: pointer;
 }
 
 form {
@@ -198,7 +207,27 @@ form h2 {
     width: 30%;
 }
 
-.form-group input {
+input {
     width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid black;
 }
 
+input:valid {
+    border-color: #E5E7EB;
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+input:focus {
+    border: 2px solid rgb(59, 121, 255);
+    box-shadow: 2px 2px 5px grey;
+}
+
+input:focus:invalid {
+    border: 2px solid red;
+    box-shadow: 2px 2px 5px grey;
+}
